@@ -311,7 +311,7 @@ public static class Milestone3Command
         return "(no metrics)";
     }
 
-    /// <summary>Resolves the wire-transfer threshold: env, then policy file, then default 1000.</summary>
+    /// <summary>Resolves the wire-transfer threshold: env, then policy file, then default 500.</summary>
     private static decimal ResolveThreshold(string? policyPath)
     {
         if (decimal.TryParse(EvalRuntime.Env("FDE_WIRE_TRANSFER_THRESHOLD"), NumberStyles.Any, CultureInfo.InvariantCulture, out var fromEnv)
@@ -336,8 +336,8 @@ public static class Milestone3Command
             }
         }
 
-        Console.WriteLine("[m3] no threshold source found — defaulting to 1000.00 (set FDE_WIRE_TRANSFER_THRESHOLD or --policy)");
-        return 1000m;
+        Console.WriteLine("[m3] no threshold source found — defaulting to 500.00 (set FDE_WIRE_TRANSFER_THRESHOLD or --policy)");
+        return 500m;
     }
 
     /// <summary>

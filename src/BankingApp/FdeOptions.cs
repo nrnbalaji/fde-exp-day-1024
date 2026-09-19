@@ -124,7 +124,7 @@ public sealed class FdeOptions
     public decimal WireTransferThreshold => decimal.TryParse(_config["FDE_WIRE_TRANSFER_THRESHOLD"], NumberStyles.Any,
         CultureInfo.InvariantCulture, out var value)
         ? value
-        : 1000m;
+        : 500m;
 
     private static int ParsePositiveInt(string? raw, int fallback) =>
         int.TryParse(raw, NumberStyles.Integer, CultureInfo.InvariantCulture, out var id) && id > 0

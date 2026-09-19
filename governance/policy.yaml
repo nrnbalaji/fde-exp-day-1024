@@ -10,7 +10,7 @@
 #   normalize_phone, submit_wire_transfer
 #
 # Threshold lockstep: the app pauses a wire when input.amount > FDE_WIRE_TRANSFER_THRESHOLD
-# (default 1000.00 in FdeOptions), and the M3 eval reads the threshold from the
+# (default 500.00 in FdeOptions), and the M3 eval reads the threshold from the
 # settings.wire_transfer_threshold below (env override: FDE_WIRE_TRANSFER_THRESHOLD).
 # Keep the two equal, or the boundary test in the HITL pause check diverges from the
 # deployed agent's behavior.
@@ -39,4 +39,4 @@ rules:
       condition: "input.amount > policy.wire_transfer_threshold"
 
 settings:
-  wire_transfer_threshold: 1000.00
+  wire_transfer_threshold: 500.00
