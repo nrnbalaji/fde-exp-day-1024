@@ -64,7 +64,7 @@ dotnet run --project eval/EvalRunner -- promptdefense
 
 `milestone3` resolves the wire-transfer threshold as: `FDE_WIRE_TRANSFER_THRESHOLD`
 env → numeric value found on a threshold/transfer/wire line in the policy
-file → default 1000. Participants put their real number in
+file → default 500. Participants put their real number in
 `governance/policy.yaml` (e.g. `amount_cents > 150000`); the inline
 adversarial suite + HITL pause check then grade it.
 

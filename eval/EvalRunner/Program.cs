@@ -48,7 +48,7 @@ public static class Program
               FDE_PARTICIPANT_ID, FDE_POD_ID, FDE_EVENT_ID   score tags
               FDE_LANGFUSE_PUBLIC_KEY, FDE_LANGFUSE_SECRET_KEY  score auth
               FDE_LANGFUSE_BASE_URL  (default https://cloud.langfuse.com)
-              FDE_WIRE_TRANSFER_THRESHOLD  (milestone3, default 1000)
+              FDE_WIRE_TRANSFER_THRESHOLD  (milestone3, default 500)
             """);
     }
 }
